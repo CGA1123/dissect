@@ -1,0 +1,207 @@
+{
+    "source" : [
+        [
+            "v",
+            "a",
+            "l",
+            " ",
+            "f",
+            " ",
+            "=",
+            " ",
+            "f",
+            "n",
+            " ",
+            "x",
+            " ",
+            "=",
+            ">",
+            " ",
+            "f",
+            "n",
+            " ",
+            "y",
+            " ",
+            "=",
+            ">",
+            " ",
+            "l",
+            "e",
+            "t",
+            " ",
+            "v",
+            "a",
+            "l",
+            " ",
+            "w",
+            " ",
+            "=",
+            " ",
+            "y",
+            " ",
+            "+",
+            " ",
+            "1",
+            " ",
+            "i",
+            "n",
+            " ",
+            "w",
+            ":",
+            ":",
+            "y",
+            " ",
+            "e",
+            "n",
+            "d",
+            "\\n"
+          ]
+      ],
+    "regions" : [
+        {
+            "type" : "leaf",
+            "color" : "R",
+            "weight" : 1,
+            "region" : {
+                "fromLine" : 1,
+                "fromColumn" : 17,
+                "toLine" : 1,
+                "toColumn" : 18
+              }
+          },
+        {
+            "type" : "leaf",
+            "color" : "R",
+            "weight" : 1,
+            "region" : {
+                "fromLine" : 1,
+                "fromColumn" : 20,
+                "toLine" : 1,
+                "toColumn" : 20
+              }
+          },
+        {
+            "type" : "leaf",
+            "color" : "R",
+            "weight" : 1,
+            "region" : {
+                "fromLine" : 1,
+                "fromColumn" : 22,
+                "toLine" : 1,
+                "toColumn" : 23
+              }
+          },
+        {
+            "type" : "leaf",
+            "color" : "R",
+            "weight" : 1,
+            "region" : {
+                "fromLine" : 1,
+                "fromColumn" : 37,
+                "toLine" : 1,
+                "toColumn" : 38
+              }
+          },
+        {
+            "type" : "leaf",
+            "color" : "B",
+            "weight" : 1,
+            "region" : {
+                "fromLine" : 1,
+                "fromColumn" : 39,
+                "toLine" : 1,
+                "toColumn" : 39
+              }
+          },
+        {
+            "type" : "leaf",
+            "color" : "P",
+            "weight" : 1,
+            "region" : {
+                "fromLine" : 1,
+                "fromColumn" : 47,
+                "toLine" : 1,
+                "toColumn" : 48
+              }
+          },
+        {
+            "type" : "leaf",
+            "color" : "R",
+            "weight" : 1,
+            "region" : {
+                "fromLine" : 1,
+                "fromColumn" : 49,
+                "toLine" : 1,
+                "toColumn" : 49
+              }
+          }
+      ],
+    "links" : [
+        {
+            "bind" : {
+                "identifier-string" : "w",
+                "identifier-id" : 11,
+                "region" : {
+                    "fromLine" : 1,
+                    "fromColumn" : 33,
+                    "toLine" : 1,
+                    "toColumn" : 33
+                  }
+              },
+            "access" : {
+                "identifier-string" : "w",
+                "identifier-id" : 11,
+                "region" : {
+                    "fromLine" : 1,
+                    "fromColumn" : 46,
+                    "toLine" : 1,
+                    "toColumn" : 46
+                  }
+              }
+          },
+        {
+            "bind" : {
+                "identifier-string" : "y",
+                "identifier-id" : 10,
+                "region" : {
+                    "fromLine" : 1,
+                    "fromColumn" : 20,
+                    "toLine" : 1,
+                    "toColumn" : 20
+                  }
+              },
+            "access" : {
+                "identifier-string" : "y",
+                "identifier-id" : 10,
+                "region" : {
+                    "fromLine" : 1,
+                    "fromColumn" : 49,
+                    "toLine" : 1,
+                    "toColumn" : 49
+                  }
+              }
+          },
+        {
+            "bind" : {
+                "identifier-string" : "y",
+                "identifier-id" : 10,
+                "region" : {
+                    "fromLine" : 1,
+                    "fromColumn" : 20,
+                    "toLine" : 1,
+                    "toColumn" : 20
+                  }
+              },
+            "access" : {
+                "identifier-string" : "y",
+                "identifier-id" : 10,
+                "region" : {
+                    "fromLine" : 1,
+                    "fromColumn" : 37,
+                    "toLine" : 1,
+                    "toColumn" : 37
+                  }
+              }
+          }
+      ]
+  }
