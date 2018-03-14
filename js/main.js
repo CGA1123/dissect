@@ -1,16 +1,14 @@
-function loadData () {
-	d3.json ("examples/fn_example.viz.json", function (error, data) {
-		if (error) throw error;
-		console.log(data);
-		loadData.onloadend ();
-	});
+function loadData (callback) {
+	d3.json("examples/fn_let_example.viz.json", callback);
 }
 
-function onDataLoad () {
+function onDataLoad (error, data) {
+	if (error) throw error;
 	console.log("Data Loaded...");
+	var visualisation = Visualisation("#visualise-it");
+	visualisation.loadAndRender(data);
 }
 
 function main () {
-	loadData.onloadend = onDataLoad;
-	loadData ();
+	loadData(onDataLoad);
 }
