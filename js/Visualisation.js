@@ -11,8 +11,8 @@ function Visualisation (targetDomElement) {
 	var svg;
 	var text;
 	var highlight;
-	var lineHeight = 14;
-	var charWidth = 14;
+	var fontSize;
+	var lineHeight;
 
 	// public variable declarations
 
@@ -20,6 +20,8 @@ function Visualisation (targetDomElement) {
 	function constructor (targetDomElement) {
 		height = "100%";
 		width = "100%";
+		fontSize = 14;
+		lineHeight = 20;
 
 		svg = d3.select(targetDomElement)
 			.append("svg")
@@ -52,8 +54,8 @@ function Visualisation (targetDomElement) {
 			.append("rect")
 			.classed("highlight", true)
 			.attr("fill", function (d) { return d.color;  })
-			.attr("height", 18)
-			.attr("width", 14)
+			.attr("height", fontSize + 4)
+			.attr("width", fontSize)
 			.attr("x", function (d) { return d.x; })
 			.attr("y", function (d) { return d.y; });
 
@@ -65,8 +67,8 @@ function Visualisation (targetDomElement) {
 			.append("tspan")
 			.classed("char", true)
 			.text(function (d) { return d.data; })
-			.attr("y", function (d) { return (d.lineNumber * 20) + 14; })
-			.attr("x", function (d) { return (d.charPos * 14); });
+			.attr("y", function (d) { return (d.lineNumber * lineHeight) + fontSize; })
+			.attr("x", function (d) { return (d.charPos * fontSize); });
 	}
 
 	function tagSource (explodedSource) {
@@ -100,8 +102,8 @@ function Visualisation (targetDomElement) {
 		// -> Assume regions are only 1 line for the moment...
 		for (var i = fromChar; i <= toChar; i++) {
 			var r = {};
-			r.x = (i * 14) - 2;
-			r.y = (fromLine * 20);
+			r.x = (i * fontSize) - 2;
+			r.y = (fromLine * lineHeight);
 			r.color = region.color;
 			r.type = region.type;
 
