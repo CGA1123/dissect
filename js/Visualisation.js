@@ -18,30 +18,27 @@ function Visualisation (targetDomElement) {
 
 	// 'constructor'
 	function constructor (targetDomElement) {
-		height = 350;
-		width = 1000;
+		height = "100%";
+		width = "100%";
 
 		svg = d3.select(targetDomElement)
 			.append("svg")
 			.attr("height", height)
 			.attr("width", width);
 
-		highlight = svg.append("g").attr("y", 25);
-		text = svg.append("text").attr("y", 25);
+		highlight = svg.append("g");
+		text = svg.append("text");
 
 		return visualisationObject;
 	}
 
 	// public function definitions
 	visualisationObject.loadAndRender = function (data) {
-		console.log("loadAndRender");
-		console.log(data);
 		explodedSource = tagSource(data.source);
 		regions = processRegions(data.regions);
 		links = data.links;
 		rawData = data;
 
-		console.log(regions);
 		render();
 	};
 
@@ -68,8 +65,8 @@ function Visualisation (targetDomElement) {
 			.append("tspan")
 			.classed("char", true)
 			.text(function (d) { return d.data; })
-			.attr("y", function (d) { return (d.lineNumber * 20) + 25; })
-			.attr("x", function (d) { return (d.charPos * 14) + 15; });
+			.attr("y", function (d) { return (d.lineNumber * 20) + 14; })
+			.attr("x", function (d) { return (d.charPos * 14); });
 	}
 
 	function tagSource (explodedSource) {
@@ -103,8 +100,8 @@ function Visualisation (targetDomElement) {
 		// -> Assume regions are only 1 line for the moment...
 		for (var i = fromChar; i <= toChar; i++) {
 			var r = {};
-			r.x = (i * 14) + 15 - 2;
-			r.y = (fromLine * 20) + 15 - 4;
+			r.x = (i * 14) - 2;
+			r.y = (fromLine * 20);
 			r.color = region.color;
 			r.type = region.type;
 
