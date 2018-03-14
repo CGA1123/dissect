@@ -52,12 +52,19 @@ function Visualisation (targetDomElement) {
 
 		var enterRegion = regionsSelect.enter()
 			.append("rect")
-			.classed("highlight", true)
+			.classed("highlight", true);
+
+		regionsSelect.merge(enterRegion)
+			.transition()
+			.duration(500)
 			.attr("fill", function (d) { return d.color;  })
 			.attr("height", fontSize + 4)
 			.attr("width", fontSize)
 			.attr("x", function (d) { return d.x; })
 			.attr("y", function (d) { return d.y; });
+
+		regionsSelect.exit()
+			.remove();
 
 		// chars
 		var chars = text.selectAll(".char")
@@ -65,10 +72,17 @@ function Visualisation (targetDomElement) {
 
 		var entered = chars.enter()
 			.append("tspan")
-			.classed("char", true)
+			.classed("char", true);
+
+		chars.merge(entered)
+			.transition()
+			.duration(500)
 			.text(function (d) { return d.data; })
 			.attr("y", function (d) { return (d.lineNumber * lineHeight) + fontSize; })
 			.attr("x", function (d) { return (d.charPos * fontSize); });
+
+		chars.exit()
+			.remove();
 	}
 
 	function tagSource (explodedSource) {

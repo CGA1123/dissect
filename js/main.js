@@ -1,6 +1,5 @@
 function onDataLoad (data) {
 	console.log("Data Loaded...");
-	var visualisation = Visualisation("#visualise-it");
 	visualisation.loadAndRender(data);
 }
 
@@ -30,5 +29,6 @@ function fileSelectHandler () {
 }
 
 function main () {
+	visualisation = Visualisation("#visualise-it");
 	d3.select("#file").on('change', fileSelectHandler, false);
 }
