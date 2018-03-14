@@ -13,53 +13,52 @@
             ":",
             ":",
             "y",
-            ";",
-            "\\n"
+            ";"
           ]
       ],
     "regions" : [
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 1,
-                "toLine" : 1,
-                "toColumn" : 2
+                "fromLine" : 0,
+                "fromColumn" : 0,
+                "toLine" : 0,
+                "toColumn" : 1
               }
           },
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 4,
-                "toLine" : 1,
-                "toColumn" : 4
+                "fromLine" : 0,
+                "fromColumn" : 3,
+                "toLine" : 0,
+                "toColumn" : 3
               }
           },
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 6,
-                "toLine" : 1,
-                "toColumn" : 7
+                "fromLine" : 0,
+                "fromColumn" : 5,
+                "toLine" : 0,
+                "toColumn" : 6
               }
           },
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 9,
-                "toLine" : 1,
-                "toColumn" : 12
+                "fromLine" : 0,
+                "fromColumn" : 8,
+                "toLine" : 0,
+                "toColumn" : 11
               }
           }
       ],
@@ -69,20 +68,20 @@
                 "identifier-string" : "y",
                 "identifier-id" : 5,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 4,
-                    "toLine" : 1,
-                    "toColumn" : 4
+                    "fromLine" : 0,
+                    "fromColumn" : 3,
+                    "toLine" : 0,
+                    "toColumn" : 3
                   }
               },
             "access" : {
                 "identifier-string" : "y",
                 "identifier-id" : 5,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 9,
-                    "toLine" : 1,
-                    "toColumn" : 9
+                    "fromLine" : 0,
+                    "fromColumn" : 8,
+                    "toLine" : 0,
+                    "toColumn" : 8
                   }
               }
           },
@@ -91,20 +90,20 @@
                 "identifier-string" : "y",
                 "identifier-id" : 5,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 4,
-                    "toLine" : 1,
-                    "toColumn" : 4
+                    "fromLine" : 0,
+                    "fromColumn" : 3,
+                    "toLine" : 0,
+                    "toColumn" : 3
                   }
               },
             "access" : {
                 "identifier-string" : "y",
                 "identifier-id" : 5,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 12,
-                    "toLine" : 1,
-                    "toColumn" : 12
+                    "fromLine" : 0,
+                    "fromColumn" : 11,
+                    "toLine" : 0,
+                    "toColumn" : 11
                   }
               }
           }

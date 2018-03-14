@@ -27,7 +27,10 @@
             " ",
             "l",
             "e",
-            "t",
+            "t"
+          ],
+        [
+            " ",
             " ",
             "v",
             "a",
@@ -41,8 +44,9 @@
             " ",
             "+",
             " ",
-            "1",
-            " ",
+            "1"
+          ],
+        [
             "i",
             "n",
             " ",
@@ -53,86 +57,85 @@
             " ",
             "e",
             "n",
-            "d",
-            "\\n"
+            "d"
           ]
       ],
     "regions" : [
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 17,
-                "toLine" : 1,
-                "toColumn" : 18
+                "fromLine" : 0,
+                "fromColumn" : 16,
+                "toLine" : 0,
+                "toColumn" : 17
               }
           },
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 20,
-                "toLine" : 1,
-                "toColumn" : 20
+                "fromLine" : 0,
+                "fromColumn" : 19,
+                "toLine" : 0,
+                "toColumn" : 19
               }
           },
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 22,
-                "toLine" : 1,
-                "toColumn" : 23
+                "fromLine" : 0,
+                "fromColumn" : 21,
+                "toLine" : 0,
+                "toColumn" : 22
               }
           },
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
                 "fromLine" : 1,
-                "fromColumn" : 37,
+                "fromColumn" : 10,
                 "toLine" : 1,
-                "toColumn" : 38
+                "toColumn" : 11
               }
           },
         {
             "type" : "leaf",
-            "color" : "B",
+            "color" : "#0000FF",
             "weight" : 1,
             "region" : {
                 "fromLine" : 1,
-                "fromColumn" : 39,
+                "fromColumn" : 12,
                 "toLine" : 1,
-                "toColumn" : 39
+                "toColumn" : 12
               }
           },
         {
             "type" : "leaf",
-            "color" : "P",
+            "color" : "#FF00FF",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 47,
-                "toLine" : 1,
-                "toColumn" : 48
+                "fromLine" : 2,
+                "fromColumn" : 4,
+                "toLine" : 2,
+                "toColumn" : 5
               }
           },
         {
             "type" : "leaf",
-            "color" : "R",
+            "color" : "#FF0000",
             "weight" : 1,
             "region" : {
-                "fromLine" : 1,
-                "fromColumn" : 49,
-                "toLine" : 1,
-                "toColumn" : 49
+                "fromLine" : 2,
+                "fromColumn" : 6,
+                "toLine" : 2,
+                "toColumn" : 6
               }
           }
       ],
@@ -143,19 +146,19 @@
                 "identifier-id" : 11,
                 "region" : {
                     "fromLine" : 1,
-                    "fromColumn" : 33,
+                    "fromColumn" : 6,
                     "toLine" : 1,
-                    "toColumn" : 33
+                    "toColumn" : 6
                   }
               },
             "access" : {
                 "identifier-string" : "w",
                 "identifier-id" : 11,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 46,
-                    "toLine" : 1,
-                    "toColumn" : 46
+                    "fromLine" : 2,
+                    "fromColumn" : 3,
+                    "toLine" : 2,
+                    "toColumn" : 3
                   }
               }
           },
@@ -164,20 +167,20 @@
                 "identifier-string" : "y",
                 "identifier-id" : 10,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 20,
-                    "toLine" : 1,
-                    "toColumn" : 20
+                    "fromLine" : 0,
+                    "fromColumn" : 19,
+                    "toLine" : 0,
+                    "toColumn" : 19
                   }
               },
             "access" : {
                 "identifier-string" : "y",
                 "identifier-id" : 10,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 49,
-                    "toLine" : 1,
-                    "toColumn" : 49
+                    "fromLine" : 2,
+                    "fromColumn" : 6,
+                    "toLine" : 2,
+                    "toColumn" : 6
                   }
               }
           },
@@ -186,10 +189,10 @@
                 "identifier-string" : "y",
                 "identifier-id" : 10,
                 "region" : {
-                    "fromLine" : 1,
-                    "fromColumn" : 20,
-                    "toLine" : 1,
-                    "toColumn" : 20
+                    "fromLine" : 0,
+                    "fromColumn" : 19,
+                    "toLine" : 0,
+                    "toColumn" : 19
                   }
               },
             "access" : {
@@ -197,9 +200,9 @@
                 "identifier-id" : 10,
                 "region" : {
                     "fromLine" : 1,
-                    "fromColumn" : 37,
+                    "fromColumn" : 10,
                     "toLine" : 1,
-                    "toColumn" : 37
+                    "toColumn" : 10
                   }
               }
           }
