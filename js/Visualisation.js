@@ -166,7 +166,6 @@ function Visualisation (targetDomElement) {
 	}
 
 	function posFromRegion(region) {
-		console.log(region);
 		return {
 			x: ((region.fromColumn + ((region.toColumn - region.fromColumn) / 2)) * fontSize),
 			y: (region.fromLine) * lineHeight
@@ -185,29 +184,11 @@ function Visualisation (targetDomElement) {
 
 			}
 
-			/*
-			var n = {
-				identifier: element.bind["identifier-string"],
-				x: pos.x,
-				y: pos.y,
-				accesses: [posFromRegion(element.access.region)]
-			}
-
-			var bindExists = result.some(function(b) {
-				if (b.x == n.x && b.y == n.y) {
-					b.accesses.push(n.accesses[0]);
-					return true;
-				}
-
-				return false;
-			});
-
-			if (!bindExists)*/
 			result.push(acc);
 
 			return result;
 		}, []);
-		console.log(bindings);
+
 		return bindings;
 	}
 
