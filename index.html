@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>dissect</title>
+	<link rel="shortcut icon" href="favicon.ico">
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="js/Visualisation.js"></script>
 	<script src="js/main.js"></script>
@@ -10,11 +11,16 @@
 </head>
 
 <body>
+	<div id="loading">
+		<input type="file" id="file" name="file"/>
+	</div>
+
 	<div id="visualise-it">
 	</div>
 </body>
 
 <script>
+	var visualisation;
 	main();
 </script>
 </html>
