@@ -101,6 +101,9 @@ function Visualisation (targetDomElement) {
 			.attr("y2", function (d) { return d.y2; })
 			.attr("stroke-width", 2)
 			.attr("stroke", "pink");
+
+		linksSelect.exit()
+			.remove();
 	}
 
 	function processSource (explodedSource) {
