@@ -30,15 +30,16 @@ function Visualisation (targetDomElement) {
 
 		highlight = svg.append("g");
 		text = svg.append("text");
+		edges = svg.append("g");
 
 		return visualisationObject;
 	}
 
 	// public function definitions
 	visualisationObject.loadAndRender = function (data) {
-		explodedSource = tagSource(data.source);
+		explodedSource = processSource(data.source);
 		regions = processRegions(data.regions);
-		links = data.links;
+		links = processLinks(data.links);
 		rawData = data;
 
 		render();
@@ -83,9 +84,26 @@ function Visualisation (targetDomElement) {
 
 		chars.exit()
 			.remove();
+
+		var linksSelect = edges.selectAll(".edge")
+			.data(links);
+
+		var enteredLinks = linksSelect.enter()
+			.append("line")
+			.classed("edge", true);
+
+		linksSelect.merge(enteredLinks)
+			.transition()
+			.duration(500)
+			.attr("x1", function (d) { return d.x1 + 5; })
+			.attr("y1", function (d) { return d.y1; })
+			.attr("x2", function (d) { return d.x2 + 5; })
+			.attr("y2", function (d) { return d.y2; })
+			.attr("stroke-width", 2)
+			.attr("stroke", "pink");
 	}
 
-	function tagSource (explodedSource) {
+	function processSource (explodedSource) {
 		var boom = explodedSource.map(function (line, lineNumber) {
 			var l = line.map(function (char, charPos) {
 				var charObj = {};
@@ -135,6 +153,59 @@ function Visualisation (targetDomElement) {
 		return newRegions.reduce(function (accumulator, currentValue) {
 			return accumulator.concat(currentValue);
 		}, []);
+	}
+
+	function sameRegion(a,b) {
+		return (a.fromLine === b.fromLine) &&
+			(a.toLine === b.toLine) &&
+			(a.fromColumn === b.fromColumn) &&
+			(a.toColumn === b.toColumn);
+	}
+
+	function posFromRegion(region) {
+		console.log(region);
+		return {
+			x: ((region.fromColumn + ((region.toColumn - region.fromColumn) / 2)) * fontSize),
+			y: (region.fromLine) * lineHeight
+		}
+	}
+
+	function processLinks (links) {
+		var bindings = links.reduce(function(result, element) {
+			var pos = posFromRegion(element.bind.region);
+			var accPos = posFromRegion(element.access.region);
+			var acc = {
+				x1: pos.x,
+				y1: pos.y,
+				x2: accPos.x,
+				y2: accPos.y,
+
+			}
+
+			/*
+			var n = {
+				identifier: element.bind["identifier-string"],
+				x: pos.x,
+				y: pos.y,
+				accesses: [posFromRegion(element.access.region)]
+			}
+
+			var bindExists = result.some(function(b) {
+				if (b.x == n.x && b.y == n.y) {
+					b.accesses.push(n.accesses[0]);
+					return true;
+				}
+
+				return false;
+			});
+
+			if (!bindExists)*/
+			result.push(acc);
+
+			return result;
+		}, []);
+		console.log(bindings);
+		return bindings;
 	}
 
 	return constructor(targetDomElement);

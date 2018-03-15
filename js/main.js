@@ -18,7 +18,7 @@ function fileSelectHandler () {
 				var data = JSON.parse(event.target.result);
 				onDataLoad(data);
 			} catch (e) {
-				alert("JSON Parsing Failed!");
+				if (e instanceof SyntaxError) alert("JSON Parsing Failed!");
 				console.log(e);
 			}
 		}
