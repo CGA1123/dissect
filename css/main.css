@@ -31,3 +31,10 @@ text {
 .hide {
 	fill: white;
 }
+
+.error-message {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 14px;
+	color: red;
+	margin-bottom:20px;
+}

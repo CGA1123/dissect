@@ -8,6 +8,8 @@ function Visualisation (targetDomElement) {
 
 	var height;
 	var width;
+	var target;
+	var errors;
 	var svg;
 	var text;
 	var highlight;
@@ -23,7 +25,12 @@ function Visualisation (targetDomElement) {
 		fontSize = 14;
 		lineHeight = 20;
 
-		svg = d3.select(targetDomElement)
+		target = d3.select(targetDomElement)
+
+		errors = target.append("div")
+			.classed("error-message", true);
+
+		svg = target
 			.append("svg")
 			.attr("height", height)
 			.attr("width", width);
@@ -42,11 +49,15 @@ function Visualisation (targetDomElement) {
 		links = processLinks(data.links);
 		rawData = data;
 
+
 		render();
 	};
 
 	// private function definitions
 	function render () {
+		// error message
+		errors.text(rawData.msg);
+
 		// regions
 		var regionsSelect = highlight.selectAll(".highlight")
 			.data(regions);
