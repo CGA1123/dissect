@@ -37,3 +37,7 @@ At the moment output is generated using the following command `$ skalpel -d TEMP
 ## Licence
 
 Distributed under the terms of the [MIT License](./LICENSE).
+
+---
+
+*What are the [emojis](https://github.com/carloscuesta/gitmoji) all about?*
