@@ -32,7 +32,7 @@ Build instruction for skalpel can be found [here](https://github.com/ultra-group
 Both this project & ultra-group/skalpel@new-output are under heavy development and subject big changes.
 The JSON output for `skalpel` (and therefore input for `dissect`) has not yet been finalised.
 
-At the moment output is generated using the following command `$ skalpel -d TEMP -b 1 <file.sml>`
+At the moment output is generated using the following command `$ skalpel -z <outfile> -b 1 <file.sml>`
 
 ## Licence
 
