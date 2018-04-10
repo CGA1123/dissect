@@ -45,3 +45,7 @@ text {
 	color: black;
 	margin-bottom:10px;
 }
+
+.edge {
+	fill: none;
+}
