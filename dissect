@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#
+# A helper script to generate skalpel visualisation files and open the
+# visualisation webapp
+
+set -eu
+
+# Require 1 args (source file)
+if [ ! ${#} -eq 1 ] ; then
+	echo "Usage: ./dissect <source_file>"
+	exit 1
+fi
+
+# macOS or Linux?
+UNAME_S=$(uname -s)
+if [[ "${UNAME_S}" = Linux ]]; then
+	OPEN="firefox -new-tab"
+elif [[ "${UNAME_S}" = "Darwin" ]]; then
+	OPEN="open"
+fi
+
+# skalpel command to run analysis
+SKALPEL_CMD="skalpel -z ${1} -b 1 ${1}"
+
+# Run skalpel
+${SKALPEL_CMD}
+
+${OPEN} http://localhost:1337
+
+# Start python server
+python3 -m http.server 1337
+
+echo "Bye!"
