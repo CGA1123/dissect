@@ -5,6 +5,9 @@ function Visualisation (targetDomElement) {
 	var regions;
 	var links;
 	var data;
+	var nextButton;
+	var previousButton;
+	var sliceIndicator;
 
 	var currentSlice;
 
@@ -34,6 +37,13 @@ function Visualisation (targetDomElement) {
 
 		lineGenerator = d3.line()
 			.curve(d3.curveCardinal);
+
+		nextButton = d3.select("#next");
+		previousButton = d3.select("#previous");
+		sliceIndicator = d3.select("#slice-track");
+
+		nextButton.on("click", visualisationObject.nextSlice)
+		previousButton.on("click", visualisationObject.previousSlice)
 
 		target = d3.select(targetDomElement)
 
@@ -65,6 +75,10 @@ function Visualisation (targetDomElement) {
 		render(currentSlice + 1);
 	}
 
+	visualisationObject.previousSlice = function () {
+		render(currentSlice - 1);
+	}
+
 	// private function definitions
 	function render (sliceNum) {
 		currentSlice = sliceNum % data.length
@@ -73,6 +87,19 @@ function Visualisation (targetDomElement) {
 		explodedSource = processSource(slice.source);
 		regions = processRegions(slice.regions);
 		links = processLinks(slice.links);
+
+		// navigator stuff...
+		sliceIndicator.text((currentSlice + 1) + "/" + data.length);
+		previousButton.attr("disabled", function () {
+			var show = (currentSlice <= 0) ? true : null;
+			return show;
+		});
+
+		nextButton.attr("disabled", function () {
+			var show = ((currentSlice + 1) >= data.length) ? true : null;
+			return show;
+		});
+
 		// error message
 		errors.text(slice.msg);
 
