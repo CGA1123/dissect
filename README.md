@@ -7,17 +7,21 @@ This project is being developed as part of a final year dissertation required fo
 
 ## Installing
 
-`dissect` is just a simple web app, all you need to do is serve the files in this repo from the project root.
+You just need to clone this repo, and run the helper script provided!
+You must have an up-to-date version of Skalpel installed on your machine.
 
 For example:
 
 ```
 $ git clone https://github.com/CGA1123/dissect.git
 $ cd dissect
-$ python -m http.server 8000
+$ ./dissect <sml_source_file>
 ```
 
-You should then be able to go to your browser go to http://localhost:8000!
+The script should open up your browser to http:/localhost:1337
+You'll need to open up the generated file through the browser interface,
+The generated file will be in the same folder as the source file you provided,
+it will have the same name with `.viz.json` appended.
 
 ### Dependencies
 
@@ -33,6 +37,19 @@ Both this project & ultra-group/skalpel@new-output are under heavy development a
 The JSON output for `skalpel` (and therefore input for `dissect`) has not yet been finalised.
 
 At the moment output is generated using the following command `$ skalpel -z <outfile> -b 1 <file.sml>`
+
+**The output provided from skalpel is not directly supported!!**
+JSON outputed by skalpel should be wrapped in a top-level JSON object,
+with one key "data" containing an array of skalpels output, i.e:
+```json
+{
+	"data": [
+		<JSON AS OUTPUTTED BY SKALPEL>
+	]
+}
+```
+
+This is done to make it easier to support multiple error slice being visualised.
 
 ## Licence
 
