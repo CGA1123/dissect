@@ -15,7 +15,7 @@ function fileSelectHandler () {
 	reader.onloadend = function (event) {
 		if (event.target.readyState === FileReader.DONE) {
 			try {
-				var data = JSON.parse(event.target.result);
+				var data = JSON.parse(event.target.result).data;
 				onDataLoad(data);
 			} catch (e) {
 				if (e instanceof SyntaxError) alert("JSON Parsing Failed!");

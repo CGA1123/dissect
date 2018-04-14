@@ -5,22 +5,29 @@ html, body {
 
 body {
 	margin: 0;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #loading {
-	width: 1000px;
 	height: 25px;
-	margin-right: auto;
-	margin-left: auto;
 	margin-top: 25px;
 }
 
 #visualise-it {
-	width: 1000px;
-	margin-right: auto;
-	margin-left: auto;
 	margin-top: 25px;
 	height: 100%;
+}
+
+#controls {
+	height: 25px;
+	display: flex;
+}
+
+#slice-track {
+	flex-grow: 10;
+	text-align: center;
 }
 
 text {
@@ -44,4 +51,8 @@ text {
 	font-size: 14px;
 	color: black;
 	margin-bottom:10px;
+}
+
+.edge {
+	fill: none;
 }
